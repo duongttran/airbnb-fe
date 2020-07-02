@@ -1,5 +1,4 @@
 import React from "react";
-import faker from "faker/locale/en_CA";
 
 export default function Card(props) {
   const {
@@ -21,13 +20,13 @@ export default function Card(props) {
 
       <p className="country">{country}</p>
       <h2>{title}</h2>
-      <h5>
-        From ${price}/person • {duration}h
-      </h5>
-      <h3>{introduction}</h3>
       <h4>
-        ★ {rating} ({peopleRated})
+        From ${price}/person • {duration}h
       </h4>
+      <h3>{introduction}</h3>
+      <h5>
+        ★ {rating} ({peopleRated})
+      </h5>
     </div>
   );
 }

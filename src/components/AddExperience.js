@@ -26,6 +26,7 @@ const AddExperience = () => {
     });
     alert("Yay experience created");
   };
+
   return (
     <div>
       <form onSubmit={createExperience}>
@@ -73,6 +74,7 @@ const AddExperience = () => {
           onChange={(e) => setPictureUrl(e.target.value)}
         />
         <br />
+        <button onClick={createExperience}>Create Experience</button>
       </form>
     </div>
   );

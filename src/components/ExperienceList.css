@@ -1,37 +1,69 @@
 body {
   background-color: snow;
+  /* font-family: "Noto Sans JP", sans-serif; */
 }
 
 .experience-list {
   display: flex;
+  flex-wrap: wrap;
+  /* width: 1200px; */
+  justify-content: center;
 }
 
 .card {
-  max-width: 300px;
+  max-width: 250px;
+  margin: 30px;
 }
 
 h2 {
-  color: green;
+  color: mediumaquamarine;
   text-transform: capitalize;
 }
 
 h3 {
-  color: red;
+  color: #333;
+  font-weight: lighter;
+  line-height: 1.4;
 }
 
 .country {
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+/* https://w3bits.com/css-image-hover-zoom/ */
+.img-hover-zoom {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .img-hover-zoom--colorize img {
-  transition: transform 0.5s, filter 1.5s ease-in-out;
+  transition: transform 0.5s, filter 1s ease-in-out;
   filter: grayscale(0);
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
 }
 
 /* The Transformation */
 .img-hover-zoom--colorize:hover img {
   filter: grayscale(100%);
   transform: scale(1.1);
+}
+
+.jumbotron {
+  background-color: lightgray;
+  background-image: url(https://images.pexels.com/photos/235648/pexels-photo-235648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 50px;
+  height: 350px;
+}
+
+.jumbotron-text {
+  color: white;
 }
