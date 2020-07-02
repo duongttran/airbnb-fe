@@ -1,7 +1,37 @@
 body {
-  background-color: lightcoral;
+  background-color: snow;
+}
+
+.experience-list {
+  display: flex;
+}
+
+.card {
+  max-width: 300px;
+}
+
+h2 {
+  color: green;
+  text-transform: capitalize;
 }
 
 h3 {
   color: red;
+}
+
+.country {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.img-hover-zoom--colorize img {
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  filter: grayscale(0);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(100%);
+  transform: scale(1.1);
 }
