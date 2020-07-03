@@ -13,20 +13,22 @@ export default function Card(props) {
   } = props.experience;
 
   return (
-    <div className="card">
+    <div className="card-item">
       <div class="img-hover-zoom img-hover-zoom--colorize">
         <img src={pictureUrl} />
       </div>
 
       <p className="country">{country}</p>
-      <h2>{title}</h2>
-      <h4>
+      <p class="title">
+        <a href="#">{title}</a>
+      </p>
+      <p class="price">
         From ${price}/person • {duration}h
-      </h4>
-      <h3>{introduction}</h3>
-      <h5>
+      </p>
+      <p>{introduction}</p>
+      <p>
         ★ {rating} ({peopleRated})
-      </h5>
+      </p>
     </div>
   );
 }

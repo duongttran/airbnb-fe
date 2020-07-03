@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ExperienceList.css";
 import faker from "faker/locale/vi";
-import Card from "./Card";
+import CardItem from "./CardItem";
 import { Jumbotron, Button, Container, Row } from "react-bootstrap/";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -51,22 +51,22 @@ export default function ExperienceList() {
           <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
         </div> */}
 
-        <div className="jumbotron-text">
-          <h1>Hello, world!</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-            repellendus saepe consequuntur corrupti recusandae totam non fugit.
-            Qui harum sapiente minus fugiat nobis maiores quia minima architecto
-            molestias earum sit, optio et possimus ab veniam velit iure
-            voluptatem aliquam necessitatibus nemo labore est? Quaerat magni rem
-            corporis odio optio provident.
-          </p>
+        <div class="col-md-4">
+          <div className="jumbotron-text">
+            <h1>Hello, world!</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Excepturi, repellendus saepe consequuntur corrupti recusandae
+              totam non fugit. Qui harum sapiente minus fugiat nobis maiores
+              quia minima veniam velit iure voluptatem aliquam necessitatibus
+              nemo labore est.
+            </p>
+            <Button variant="primary">Learn more</Button>
+          </div>
         </div>
-
-        <Button variant="primary">Learn more</Button>
       </Jumbotron>
 
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           <div class="col-md-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
@@ -86,11 +86,11 @@ export default function ExperienceList() {
             quo iure, nostrum dignissimos unde mollitia.
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="experience-list">
         {experiences.map((e) => (
-          <Card experience={e} />
+          <CardItem experience={e} />
         ))}
       </div>
     </div>

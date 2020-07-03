@@ -10,14 +10,27 @@ body {
   justify-content: center;
 }
 
-.card {
+.card-item {
   max-width: 250px;
-  margin: 30px;
+  margin: 5px;
 }
 
-h2 {
+.title a {
   color: mediumaquamarine;
   text-transform: capitalize;
+  font-size: 24px;
+  transition: 0.5s;
+  margin-bottom: 0px;
+  line-height: 28px;
+}
+
+.title a:hover {
+  text-decoration: none;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 h3 {
@@ -31,11 +44,12 @@ h3 {
   font-size: 12px;
   font-weight: normal;
   margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 /* https://w3bits.com/css-image-hover-zoom/ */
 .img-hover-zoom {
-  height: 180px;
+  height: 150px;
   overflow: hidden;
   border-radius: 5px;
 }
@@ -60,7 +74,7 @@ h3 {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  padding: 50px;
+  /* padding: 50px; */
   height: 350px;
 }
 
