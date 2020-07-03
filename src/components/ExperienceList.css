@@ -1,6 +1,6 @@
 body {
   background-color: snow;
-  /* font-family: "Noto Sans JP", sans-serif; */
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .experience-list {
@@ -11,8 +11,8 @@ body {
 }
 
 .card-item {
-  max-width: 250px;
-  margin: 5px;
+  max-width: 230px;
+  margin: 10px;
 }
 
 .title a {
@@ -49,17 +49,17 @@ h3 {
 
 /* https://w3bits.com/css-image-hover-zoom/ */
 .img-hover-zoom {
-  height: 150px;
+  height: 320px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .img-hover-zoom--colorize img {
   transition: transform 0.5s, filter 1s ease-in-out;
   filter: grayscale(0);
-  max-width: 100%;
+  /* max-width: 100%; */
   vertical-align: middle;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* The Transformation */

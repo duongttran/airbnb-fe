@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddExperience.css";
 
 const AddExperience = () => {
   const [title, setTitle] = useState("");
@@ -29,6 +30,7 @@ const AddExperience = () => {
 
   return (
     <div>
+      <h1>Create your experience</h1>
       <form onSubmit={createExperience}>
         <label for="title">Title</label>
         <input
