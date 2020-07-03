@@ -1,0 +1,53 @@
+.aly-blacktop {
+    background-color: black;
+    padding: 50px;
+    color: white;
+  }
+  
+  .aly-format-header {
+      padding-top: 50px;
+    display: flex;
+  }
+  
+  .aly-online {
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .aly-text {
+    padding-left: 50px;
+  }
+
+.aly-wyd {
+    display: flex;
+}
+
+.aly-title {
+    display: flex;
+    flex: 0 0 10em;
+    padding: 50px;
+    font-weight: bolder;
+}
+
+.aly-pgh {
+    padding: 50px;
+}
+
+.aly-grey {
+    background-color: lightgray;
+}
+
+.aly-bold {
+    font-weight: bolder;
+}
+
+.aly-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

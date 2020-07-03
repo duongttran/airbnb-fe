@@ -3,6 +3,7 @@ import ExperienceList from "./components/ExperienceList";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddExperience from "./components/AddExperience";
+import Details from "./components/Details";
 // import faker from "faker";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/add">
             <AddExperience />
           </Route>
+          <Route path="/details" component={Details}/>
           <Route path="/">
             <ExperienceList />
           </Route>
