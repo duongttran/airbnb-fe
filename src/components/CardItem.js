@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card(props) {
   const {
-    pictureUrl,
+    images,
     country,
     title,
     price,
@@ -15,7 +15,7 @@ export default function Card(props) {
   return (
     <div className="card-item">
       <div class="img-hover-zoom img-hover-zoom--colorize">
-        <img src={pictureUrl} />
+        <img src={images} />
       </div>
 
       <p className="country">{country}</p>

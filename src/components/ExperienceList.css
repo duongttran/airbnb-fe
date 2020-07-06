@@ -26,6 +26,7 @@ body {
 
 .title a:hover {
   text-decoration: none;
+  color: lightgreen;
 }
 
 .price {
@@ -70,14 +71,51 @@ h3 {
 
 .jumbotron {
   background-color: lightgray;
-  background-image: url(https://images.pexels.com/photos/235648/pexels-photo-235648.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(https://images.pexels.com/photos/671956/pexels-photo-671956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   /* padding: 50px; */
-  height: 350px;
+  height: 400px;
+  border-radius: 0px !important;
 }
 
 .jumbotron-text {
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 1.5%;
+}
+/* 
+
+.page-btn {
+  background-color: transparent;
+  border: 0;
+  margin: 15px 0 25px;
+  transition: 0.5s;
+}
+
+.page-btn:hover {
+  color: mediumaquamarine;
+  transition: 0.5s;
+}
+
+.page-btn:focus {
+  outline: 0;
+}
+
+.page-btn:disabled {
+  color: lightgrey;
+} */
+
+.MuiPaginationItem-page.Mui-selected {
+  outline: 0;
 }
