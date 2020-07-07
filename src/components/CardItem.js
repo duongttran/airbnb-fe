@@ -9,7 +9,7 @@ export default function Card(props) {
     introduction,
     duration,
     rating,
-    peopleRated,
+    groupSize,
   } = props.experience;
 
   return (
@@ -26,8 +26,8 @@ export default function Card(props) {
         From ${price}/person • {duration}h
       </p>
       <p>{introduction}</p>
-      <p>
-        ★ {rating} ({peopleRated})
+      <p class="rating">
+        ★ {rating} ({groupSize})
       </p>
     </div>
   );

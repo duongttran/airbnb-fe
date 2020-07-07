@@ -11,6 +11,8 @@ import Rheostat from "rheostat";
 
 import { Dropdown } from "react-bootstrap/";
 
+import { Navbar, Nav, NavDropdown, Form, FormControl } from "react-bootstrap/";
+
 // var hours = [3, 6, 9, 12];
 // var rating = [1, 2, 3, 4, 5];
 var jumbotronPhoto = [
@@ -92,6 +94,31 @@ export default function ExperienceList() {
 
   return (
     <div>
+      <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
+        <Navbar.Brand href="#home">My AirBnb</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/add">Add</Nav.Link>
+            <Nav.Link href="#link">Update</Nav.Link>
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown> */}
+          </Nav>
+          {/* <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form> */}
+        </Navbar.Collapse>
+      </Navbar>
       <Jumbotron className="jumbotron">
         {/* <div class="jumbotron-photo"> */}
         {/* <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> */}
@@ -107,6 +134,7 @@ export default function ExperienceList() {
           </div>
         </div>
       </Jumbotron>
+
       <div class="filter">
         <div class="sort-by">
           <Dropdown className="dropdown-filter">
@@ -148,6 +176,7 @@ export default function ExperienceList() {
           />
         </div>
       </div>
+
       <div className="experience-list">
         {experiences.map((e) => (
           <CardItem experience={e} />
