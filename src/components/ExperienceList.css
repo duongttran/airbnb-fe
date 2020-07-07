@@ -76,9 +76,9 @@ h3 {
 
 .jumbotron {
   background-color: lightgray;
-  background-image: url(https://images.pexels.com/photos/671956/pexels-photo-671956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url(https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   /* padding: 50px; */
   height: 400px;
@@ -129,6 +129,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 7%;
 }
 
