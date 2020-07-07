@@ -7,11 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Pagination from "@material-ui/lab/Pagination";
 
-import Rheostat from "rheostat";
-
 import { Dropdown } from "react-bootstrap/";
 
 import { Navbar, Nav, NavDropdown, Form, FormControl } from "react-bootstrap/";
+
+import Rheostat from "rheostat";
+
+import "rheostat/initialize";
+import "rheostat/css/rheostat.css";
 
 // var hours = [3, 6, 9, 12];
 // var rating = [1, 2, 3, 4, 5];
@@ -27,12 +30,17 @@ export default function ExperienceList() {
   const [experiences, setExperiences] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [maxPage, setMaxPage] = useState(1);
+
+  const [minPrice, setMinPrice] = useState(1);
+  const [maxPrice, setMaxPrice] = useState(1000);
+  const [isDragging, setIsDragging] = useState(1);
+
   useEffect(() => {
     fetchData();
   }, [currentPage]);
   const fetchData = async (p = 1) => {
     const data = await fetch(
-      `https://group7-airbnb-website.herokuapp.com/experiences?page=${p}`
+      `https://group7-airbnb-website.herokuapp.com/experiences?page=${p}&minPrice=${minPrice}&maxPrice=${maxPrice}`
     );
     const experiencesData = await data.json();
     console.log("total", experiencesData.data);
@@ -83,19 +91,23 @@ export default function ExperienceList() {
     setExperiences(sortedExpList);
   };
 
-  let durationRange = (order) => {
-    const duration = experiences.map((one) => one.price);
+  let ratingRange = (order) => {
+    const rating = experiences.map((one) => one.price);
     const duplicateExpList = [...experiences];
     const sortedExpList = duplicateExpList.sort(function (a, b) {
-      return (a.duration - b.duration) * order;
+      return (a.rating - b.rating) * order;
     });
     setExperiences(sortedExpList);
   };
 
+  const handleChange = (e) => {
+    setMinPrice(e.values[0]);
+    setMaxPrice(e.values[1]);
+  };
   return (
     <div>
       <Navbar bg="dark" expand="lg" fixed="top" variant="dark">
-        <Navbar.Brand href="#home">My AirBnb</Navbar.Brand>
+        <Navbar.Brand href="/">My AirBnb</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -119,6 +131,7 @@ export default function ExperienceList() {
           </Form> */}
         </Navbar.Collapse>
       </Navbar>
+
       <Jumbotron className="jumbotron">
         {/* <div class="jumbotron-photo"> */}
         {/* <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" /> */}
@@ -134,7 +147,14 @@ export default function ExperienceList() {
           </div>
         </div>
       </Jumbotron>
-
+      <div class="container">
+        <Rheostat
+          min={1}
+          max={1000}
+          values={[minPrice, maxPrice]}
+          onChange={handleChange}
+        />
+      </div>
       <div class="filter">
         <div class="sort-by">
           <Dropdown className="dropdown-filter">
@@ -154,19 +174,20 @@ export default function ExperienceList() {
 
           <Dropdown className="dropdown-filter">
             <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
-              Sort by Duration
+              Sort by rating
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => durationRange(-1)}>
+              <Dropdown.Item onClick={() => ratingRange(-1)}>
                 High to Low
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => durationRange(1)}>
+              <Dropdown.Item onClick={() => ratingRange(1)}>
                 Low to High
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>
+
         <div class="pagination">
           <Pagination
             count={maxPage}

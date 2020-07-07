@@ -144,3 +144,18 @@ h3 {
 .rating {
   font-size: 14px;
 }
+
+/* .DefaultHandle_handle,
+.DefaultHandle_handle_1,
+.DefaultHandle_handle__horizontal,
+.DefaultHandle_handle__horizontal_2 {
+  border-radius: 100%;
+} */
+
+.DefaultProgressBar_progressBar {
+  background-color: mediumaquamarine !important;
+}
+
+.DefaultHandle_handle {
+  border-radius: 50% !important;
+}

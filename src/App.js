@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddExperience from "./components/AddExperience";
 // import faker from "faker";
 
+import "rheostat/initialize";
+import "rheostat/css/rheostat.css";
+
 function App() {
   // let array = new Array(100);
   // let experiences = [...array]
